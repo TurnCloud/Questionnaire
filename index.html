@@ -286,7 +286,7 @@ input.err{border-color:var(--danger);background:var(--danger-tint)}
    CONFIG — paste your Google Apps Script Web App URL here (see Code.gs / SETUP)
    ========================================================================= */
 const CONFIG = {
-  webAppUrl: "https://script.google.com/macros/s/AKfycbzUmeSJRUYujcws8gg7_qKlaZvYN8hV42BwktO-8U9NnYyqWB-29X96Hw2W1ULVuBJxOw/exec",   // e.g. "https://script.google.com/macros/s/AKfy.../exec"
+  webAppUrl: "",   // e.g. "https://script.google.com/macros/s/AKfy.../exec"
   company: "TURNCLOUD"
 };
 
@@ -705,7 +705,7 @@ function buildPayload(){
     project:get('project')||'', location:get('location')||'',
     propertyType:get('propertyType')||'', status:get('status')||'', star:get('star')||'',
     floors:get('floors')||'', rooms:get('rooms')||'', timeline:get('timeline')||'',
-    selectedSystems: selSys.join(' | '),
+    selectedSystems: selSys.join('\n'),
     docFormat:get('docs.format')||'', docsAvailable:(get('docs.provide')||[]).join(', '),
     fileLink:get('fileLink')||'', additionalNote:get('docs.note')||'', budget:get('docs.budget')||''
   };
